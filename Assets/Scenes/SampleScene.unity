@@ -653,6 +653,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 4778760503705798377, guid: 7f472a0496d89994a9ed203ed399022d,
+        type: 3}
+      propertyPath: dashMultiplier
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5281324237966832153, guid: 7f472a0496d89994a9ed203ed399022d,
         type: 3}
       propertyPath: m_RootOrder

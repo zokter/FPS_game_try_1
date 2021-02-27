@@ -9,13 +9,7 @@ public class PlayerMovementScript : MonoBehaviour
     //horizontal 
     //player horizontal script
     public float speed = 20f;
-    public float strafeMultiplier = 5;
-
-    //strafe timing
-    public float ButtonCooler = 0.5f; // Half a second before reset
-    //count
-    private int ButtonCount = 0;
-
+    public Vector3 move;
 
     //vertical
     //current falling speed
@@ -48,8 +42,6 @@ public class PlayerMovementScript : MonoBehaviour
             jumpFunction();
         }
 
-
-
         horizonalMovement();
         fallFunction();
     }
@@ -59,10 +51,9 @@ public class PlayerMovementScript : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         //the direction in which the player will move. Based on local direction.
-        Vector3 move = transform.right * x + transform.forward * z;
+        move = transform.right * x + transform.forward * z;
 
         controller.Move(move * speed * Time.deltaTime);
-
     }
 
     void fallFunction()
@@ -81,8 +72,4 @@ public class PlayerMovementScript : MonoBehaviour
         velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
     }
 
-    void Strafe()
-    {
-        controller.Move(velocity * strafeMultiplier * Time.deltaTime);
-    }
 }
