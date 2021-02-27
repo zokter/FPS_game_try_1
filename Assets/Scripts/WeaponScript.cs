@@ -8,6 +8,7 @@ public class WeaponScript : MonoBehaviour
     public Camera FPScam;
 
     public ParticleSystem muzzleFlash;
+    public GameObject hitEffect;
 
     // Update is called once per frame
     void Update()
@@ -28,6 +29,9 @@ public class WeaponScript : MonoBehaviour
             Debug.Log(hit.transform.name);
             damageTransfer(hit);
         }
+
+        GameObject hitEffectGO = Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
+        Destroy(hitEffectGO, 1f);
     }
 
     void damageTransfer(RaycastHit hit)

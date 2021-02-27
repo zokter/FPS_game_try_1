@@ -127,32 +127,12 @@ ParticleSystem:
     type: 3}
   m_PrefabInstance: {fileID: 1588808598}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &200479103 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6787876782241056425, guid: 7f472a0496d89994a9ed203ed399022d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1588808598}
-  m_PrefabAsset: {fileID: 0}
 --- !u!20 &200479106 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 6669202642086768001, guid: 7f472a0496d89994a9ed203ed399022d,
     type: 3}
   m_PrefabInstance: {fileID: 1588808598}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &200479107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 200479103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5cb400bebe62ae0478070d3ef95e2b23, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerBody: {fileID: 1524324575}
-  mouseSensitivity: 300
 --- !u!1 &235816377 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 964714823866211925, guid: 7f472a0496d89994a9ed203ed399022d,
@@ -175,6 +155,8 @@ MonoBehaviour:
   range: 100
   FPScam: {fileID: 200479106}
   muzzleFlash: {fileID: 167718202}
+  hitEffect: {fileID: 7950091427242312684, guid: 062e03dca4e3bcd4fa463764ae72b7a7,
+    type: 3}
 --- !u!1 &324711245
 GameObject:
   m_ObjectHideFlags: 0
@@ -470,6 +452,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1588808598}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1387988929 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 395457595355992041, guid: 2669f4091d6940640ac1427c9fbe743a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1925454536}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1387988931
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1387988929}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 4
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1487299231
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +608,11 @@ PrefabInstance:
       propertyPath: playerMask.m_Bits
       value: 55
       objectReference: {fileID: 0}
+    - target: {fileID: 649305863382681070, guid: 7f472a0496d89994a9ed203ed399022d,
+        type: 3}
+      propertyPath: playerBody
+      value: 
+      objectReference: {fileID: 1524324575}
     - target: {fileID: 1030733787588301574, guid: 7f472a0496d89994a9ed203ed399022d,
         type: 3}
       propertyPath: m_Layer
@@ -855,7 +862,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 395457595355992038, guid: 2669f4091d6940640ac1427c9fbe743a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2669f4091d6940640ac1427c9fbe743a, type: 3}
 --- !u!1001 &2853427108416062429
 PrefabInstance:

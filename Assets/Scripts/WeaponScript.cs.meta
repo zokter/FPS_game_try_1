@@ -3,7 +3,11 @@ guid: ef2f7239407b03d499d9a9b68c35dc55
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - FPScam: {instanceID: 0}
+  - muzzleFlash: {instanceID: 0}
+  - hitEffect: {fileID: 7950091427242312684, guid: 062e03dca4e3bcd4fa463764ae72b7a7,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
